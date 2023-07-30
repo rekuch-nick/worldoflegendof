@@ -1,5 +1,8 @@
 if(ww.state != State.play){ return; }
-
+if(runBossCreate){
+	worldBossStart();
+	runBossCreate = false;
+}
 
 
 if(state == State.ready || state == State.aggro){
@@ -66,10 +69,12 @@ if(state == State.ready || state == State.aggro){
 	var xs = xSpeed;
 	if(ww.phase == Phase.resetPos){ xs = xSpeed * 2; }
 	if(xPush != 0){ xs = xPush; }
-	xs += (moveSpeed * facing);
+	if(!holdGround){
+		xs += (moveSpeed * facing);
+	}
 	
 	
-	
+	if(attackingFrames > 0){ xs = 0; } //lock in place while slamming
 	
 	//x move
 	var dir = getDir(xs);
@@ -97,21 +102,50 @@ if(state == State.ready || state == State.aggro){
 	
 	
 	
+	if(isBoss){	bossAttack(); }
+	
+	
+	
+	
+	
+	
+	
 	characterPushDecay();
 	if(hurtTime > 0){ hurtTime --; }
+	if(attackingFrames > 0){ attackingFrames --; }
+	holdGround = false;
 	
 	//display
 	if(facing == 1 && image_xscale < 0){ image_xscale *= -1; }
 	if(facing == -1 && image_xscale > 0){ image_xscale *= -1; }
 	
 	
+	aniCD --;
+	if(aniCD < 1){
+		aniCD = aniCDMax;
+		frame = frame == 0 ? 1 : 0;
+	}
+	
+	var f = 0;
+	if(attackCD < attackWarnRange){ f = choose(2, 3); }
+	if(attackingFrames > 0){ f = 4; }
+	if(f == 0){ f = frame; }
+	image_index = f;
 	
 	
 	if(hp < 1){
 		if(isBoss){
 			ww.bossDown[room] = true;
 			ww.phase = noone;
+			ww.state = State.play;//
+			pc.state = State.ready;//
 			with(objActor){ instance_destroy(); }
+		}
+		
+		with(objEffect){
+			if(c1 == other.id){
+				instance_destroy();
+			}
 		}
 		
 		instance_destroy();

@@ -25,6 +25,10 @@ enum Ele {
 	bio,
 }
 
+enum MobAction {
+	slam,
+}
+
 draw_set_font(fntPlain);
 room_speed = 30;
 defineColors();

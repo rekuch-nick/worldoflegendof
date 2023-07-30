@@ -11,5 +11,5 @@ if(chip != noone){
 	draw_text_transformed_color(x, y, txtSmall, 1, 1, 0, txtColor, txtColor, txtColor, txtColor, 0);
 	draw_set_halign(fa_left);
 } else {
-	draw_self();
+	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, drawColor, image_alpha);
 }

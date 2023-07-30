@@ -19,4 +19,7 @@ if(other.aly == -1 && other.hurtsToTouch){
 		xPush = x < other.x ? - 12 : 12;
 		hurtTime = 30;
 	}
+	
+	harm(other, id, MobAction.slam);
+	
 }

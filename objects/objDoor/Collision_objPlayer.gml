@@ -5,4 +5,5 @@ if(pc.tappedUp && !shut){
 	pc.gotoRoomX = targetX;
 	pc.gotoRoomY = targetY;
 	ww.state = State.moveRooms;
+	
 }

@@ -11,6 +11,8 @@ foot = 31;
 head = 26;
 fat = 14;
 
+isBoss = false;
+
 xStart = x;
 yStart = y;
 
@@ -43,3 +45,6 @@ hurtTime = 0;
 
 playerShift(0);
 
+hp[imgMCTank] = 100; hpMax[imgMCTank] = 100;
+hp[imgMCHeal] = 100; hpMax[imgMCHeal] = 100;
+hp[imgMCDps] = 100; hpMax[imgMCDps] = 100;

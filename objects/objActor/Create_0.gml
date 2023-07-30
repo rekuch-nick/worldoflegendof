@@ -10,6 +10,7 @@ xPush = 0; yPush = 0;
 hurtTime = 0;
 
 platDropTime = 0;
+isBoss = false;
 
 depth = -1000;
 facing = 1;

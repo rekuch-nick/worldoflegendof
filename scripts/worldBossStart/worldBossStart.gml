@@ -7,8 +7,13 @@ function worldBossStart(){
 	ww.state = State.bossCD;
 	ww.bossStartCountDown = 30 * 2;
 	
+	
 	ww.tankAction = [];
 	ww.healAction = [];
 	
-	while(pc.sprite_index != imgMCTank){ playerShift(1); }
+	while(pc.sprite_index != imgMCTank){ 
+		with(objPlayer){
+			playerShift(1); 
+		}
+	}
 }

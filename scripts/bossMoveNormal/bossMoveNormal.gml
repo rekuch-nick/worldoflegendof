@@ -1,21 +1,24 @@
 function bossMoveNormal(){
 	
-	var tar = pc;
-	if(instance_number(objActor > 0)){
-		tar = instance_find(objActor, 0);
-		with(objActor){
-			if(sprite_index == imgMCTank){
-				tar = id;
-			}
-		}
+	var tar = bossPickTarget();
+	
+
+	
+	xTar = tar.x + targetDis;
+	yTar = tar.y
+	
+	
+	if(x > xTar){ facing = -1; }
+	
+	if(x < xTar){ facing = 1; }
+	
+	if(point_distance(x, y, xTar, y) < 11){
+		holdGround = true;
 	}
 	
 	
-	
-	if(x > tar.x + tar.fat + fat){ facing = -1; }
-	
-	if(x < tar.x + tar.fat + fat){ facing = 1; }
-	
-	
+	if(irandom_range(0, 99) < targetDisChance){
+		targetDis = tar.fat + fat; // ...
+	}
 	
 }

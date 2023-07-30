@@ -54,6 +54,16 @@ minMight = 0;
 	
 armor = 0;
 	
+runBossCreate = false;
+holdGround = false;
 
 
+attack = noone;
+attackCD = 30 * 5;
+attackCDMax = 30 * 5;
+attackWarnRange = 45;
+attackingFrames = 0;
 
+aniCD = 0;
+aniCDMax = 25;
+frame = 0;

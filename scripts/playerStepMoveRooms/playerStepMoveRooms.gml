@@ -3,7 +3,7 @@ function playerStepMoveRooms(){
 	
 	ww.curtinFade += .05 * ww.curtinFadeDir;
 	
-	if(ww.curtinFade >= 1){ 
+	if(ww.curtinFade > 1){ 
 		
 		if(gotoRoom == noone){
 			room_goto_next();
