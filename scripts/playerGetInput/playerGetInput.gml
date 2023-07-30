@@ -29,7 +29,8 @@ function playerGetInput(){
 		yIn --;
 	}
 	
-	
+	if(yIn > 0){ platDropTime = 11; }
+	platDropTime = clamp(platDropTime - 1, 0, platDropTime);
 	
 	tappedDown = keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S")) || gamepad_button_check_pressed(pc.gamepadID, gp_padd);
 	tappedUp = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W")) || gamepad_button_check_pressed(pc.gamepadID, gp_padu);
@@ -48,19 +49,22 @@ function playerGetInput(){
 	pressedJump = keyboard_check_pressed(vk_space) || gamepad_button_check_pressed(pc.gamepadID, gp_face1);
 	
 	holding1 = keyboard_check(ord("1")) || gamepad_button_check(pc.gamepadID, gp_face2);
-	pressed1 = keyboard_check_pressed(vk_shift) || gamepad_button_check_pressed(pc.gamepadID, gp_face2);
+	pressed1 = keyboard_check_pressed(ord("1")) || gamepad_button_check_pressed(pc.gamepadID, gp_face2);
 	
 	holding2 = keyboard_check(ord("2")) || gamepad_button_check(pc.gamepadID, gp_face2);
-	pressed2 = keyboard_check_pressed(vk_shift) || gamepad_button_check_pressed(pc.gamepadID, gp_face3);
+	pressed2 = keyboard_check_pressed(ord("2")) || gamepad_button_check_pressed(pc.gamepadID, gp_face3);
 	
 	holding3 = keyboard_check(ord("3")) || gamepad_button_check(pc.gamepadID, gp_face2);
-	pressed3 = keyboard_check_pressed(vk_shift) || gamepad_button_check_pressed(pc.gamepadID, gp_face4);
+	pressed3 = keyboard_check_pressed(ord("3")) || gamepad_button_check_pressed(pc.gamepadID, gp_face4);
 	
 	holding4 = keyboard_check(ord("4")) || gamepad_button_check(pc.gamepadID, gp_face2);
-	pressed4 = keyboard_check_pressed(vk_shift) || gamepad_button_check_pressed(pc.gamepadID, gp_shoulderl);
+	pressed4 = keyboard_check_pressed(ord("4")) || gamepad_button_check_pressed(pc.gamepadID, gp_shoulderl);
 	
 	holding5 = keyboard_check(ord("5")) || gamepad_button_check(pc.gamepadID, gp_face2);
-	pressed5 = keyboard_check_pressed(vk_shift) || gamepad_button_check_pressed(pc.gamepadID, gp_shoulderr);
+	pressed5 = keyboard_check_pressed(ord("5")) || gamepad_button_check_pressed(pc.gamepadID, gp_shoulderr);
+	
+	holdingStart = keyboard_check(vk_enter) || gamepad_button_check(pc.gamepadID, gp_start);
+	pressedStart = keyboard_check_pressed(vk_enter) || gamepad_button_check_pressed(pc.gamepadID, gp_start);
 	
 	
 }
