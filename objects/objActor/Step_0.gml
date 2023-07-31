@@ -39,6 +39,7 @@ if(ww.state != State.play){ return; }
 	heroFall();
 	heroAscend();
 	heroWalk();
+	heroHealing();
 	
 	
 	characterPushDecay();

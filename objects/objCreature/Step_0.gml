@@ -14,13 +14,22 @@ if(state == State.ready || state == State.aggro){
 	
 	
 	if(ww.phase == Phase.resetPos){
-		if(x < xStart){ facing = 1; }
-		if(x > xStart){ facing = -1; }
-		if(y > yStart){ ySpeed -= 2; }
+		castIndex = 0;
 		
-		if(point_distance(x, y, xStart, yStart) < 20){
+		//if(x < xStart){ facing = 1; }
+		//if(x > xStart){ facing = -1; }
+		//if(y > yStart){ ySpeed -= 2; }
+		
+		var angle = arctan2(yStart - y, xStart - x);
+		xs = cos(angle) * 22;
+		ys = sin(angle) * 22;
+		x += xs;
+		y += ys;
+		
+		if(point_distance(x, y, xStart, yStart) < 24){
 			xSpeed = 0; ySpeed = 0; facing = 0;
 		}
+		
 	} else if(ww.phase != noone){
 		bossMoveNormal();
 	}
@@ -127,7 +136,7 @@ if(state == State.ready || state == State.aggro){
 	}
 	
 	var f = 0;
-	if(attackCD < attackWarnRange){ f = choose(2, 3); }
+	if(castTime > 0){ f = choose(2, 3); }
 	if(attackingFrames > 0){ f = 4; }
 	if(f == 0){ f = frame; }
 	image_index = f;

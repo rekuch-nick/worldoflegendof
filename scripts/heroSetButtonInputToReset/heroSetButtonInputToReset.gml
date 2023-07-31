@@ -10,6 +10,15 @@ function heroSetButtonInputToReset(){
 	holding2 = false; pressed2 = false;
 	holding3 = false; pressed3 = false;
 	
+	var angle = arctan2(yStart - y, xStart - x);
+	xs = cos(angle) * 22;
+	ys = sin(angle) * 22;
+	
+	x += xs;
+	y += ys;
+	
+	
+	/*
 	if(point_distance(x, y, xStart, yStart) < 20){
 		x = xStart; y = yStart;
 		return;
@@ -27,7 +36,7 @@ function heroSetButtonInputToReset(){
 	if(y < pc.yStart){
 		yIn = 1;
 	}
-	
+	*/
 	
 	
 }

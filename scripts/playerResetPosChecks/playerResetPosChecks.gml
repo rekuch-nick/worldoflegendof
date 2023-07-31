@@ -1,8 +1,8 @@
 function playerResetPosChecks(){
 	var allBack = true;
-	if(pc.sprite_index != imgMCDps && point_distance(x, y, xStart, yStart) > 20){ allBack = false; }
-	with(objBoss){ if(point_distance(x, y, xStart, yStart) > 20){ allBack = false; } }
-	with(objActor){ if(point_distance(x, y, xStart, yStart) > 20){ allBack = false; } }
+	if(pc.sprite_index != imgMCDps && point_distance(x, y, xStart, yStart) > 24){ allBack = false; }
+	with(objBoss){ if(point_distance(x, y, xStart, yStart) > 24){ allBack = false; } }
+	with(objActor){ if(point_distance(x, y, xStart, yStart) > 24){ allBack = false; } }
 	
 	if(allBack){
 		ww.bfi = 0;
@@ -10,7 +10,8 @@ function playerResetPosChecks(){
 		
 		//x = xStart; y = yStart;
 		with(objBoss){ x = xStart; y = yStart; }
-		with(objActor){ x = xStart; y = yStart; }
+		with(objActor){ x = xStart; y = yStart; xSpeed = 0; ySpeed = 0}
+		xSpeed = 0; ySpeed = 0;
 		
 		if(sprite_index == imgMCTank){
 			instance_create_depth(x, y, depth, objActor, {sprite_index: imgMCTank});

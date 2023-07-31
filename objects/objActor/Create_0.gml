@@ -32,4 +32,7 @@ onLadder = false;
 
 xStart = x; yStart = y;
 
+castTime = 0;
+castTimeMax = 90;
+
 heroSetStats();

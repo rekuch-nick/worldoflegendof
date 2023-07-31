@@ -9,6 +9,7 @@ function harm(c1, c2, atk){
 	
 	var dmgMax = atk.mightCo * c1.might;
 	var dmgMin = 0 + (dmgMax * clamp(c1.minMight / 100, 0, 100));
+	if(dmgMin < 1){ dmgMin = 1; }
 	var dmg = irandom_range(dmgMin, dmgMax);
 	
 	var arm = 1 - (c2.armor / 100);
@@ -21,12 +22,12 @@ function harm(c1, c2, atk){
 	if(c2.isBoss && c1.sprite_index == imgMCDps){ dmg *= 4; }
 	
 	
-	if(c2.id == pc || object_index == objActor){
+	if(c2.id == pc || c2.object_index == objActor){
 		pc.hp[c2.sprite_index] -= dmg;
-		
-		
 	} else {
 		c2.hp -= dmg
 	}
 	
+	var s = instance_create_depth(c2.x, c2.y - c2.head, -900, objEffect);
+	s.txtSmall = "-" + string(dmg);
 }

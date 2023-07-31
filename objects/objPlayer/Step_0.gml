@@ -39,6 +39,7 @@ if(ww.state == State.play){
 	heroFall();
 	heroAscend();
 	heroWalk();
+	heroHealing();
 	
 	
 	characterPushDecay();
@@ -57,4 +58,10 @@ if(ww.state == State.play){
 		ww.phase = Phase.resetPos;
 	}
 	if(ww.phase == Phase.resetPos){ playerResetPosChecks(); }
+	
+	
+	
+	if(keyboard_check_pressed(vk_backspace)){
+		with(objBoss){ hp = 0; }
+	}
 }

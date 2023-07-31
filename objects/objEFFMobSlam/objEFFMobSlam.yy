@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "imgEffSlash",
-    "path": "sprites/imgEffSlash/imgEffSlash.yy",
+    "name": "imgEffSwordThrow",
+    "path": "sprites/imgEffSwordThrow/imgEffSwordThrow.yy",
   },
   "spriteMaskId": null,
   "visible": true,

@@ -67,3 +67,16 @@ attackingFrames = 0;
 aniCD = 0;
 aniCDMax = 25;
 frame = 0;
+
+
+
+
+
+spells[0] = noone;
+spellName[0] = "";
+castTimeMax[0] = 60;
+spellWhen[0] = 6;
+castIndex = 0;
+castTime = 0;
+
+

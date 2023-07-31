@@ -19,6 +19,8 @@ function heroFaceButtons(){
 	
 	
 	if(pressed1 && attackingFrames < 1 && sprite_index == imgMCHeal){ 
+		
+		
 		for(var aa=-4; aa<=4; aa++){
 			if(aa == 0){ continue; }
 			var a = aa * 64;

@@ -16,6 +16,8 @@ function bossMoveNormal(){
 		holdGround = true;
 	}
 	
+	if(castTime > 0){ holdGround = true; }
+	
 	
 	if(irandom_range(0, 99) < targetDisChance){
 		targetDis = tar.fat + fat; // ...

@@ -15,15 +15,15 @@ if(state == State.title){
 }
 
 if(state == State.bossCD){
-	var s = "Tank the boss";
-	if(pc.sprite_index == imgMCHeal){ s = "Heal the Tank"; }
-	if(pc.sprite_index == imgMCDps){ s = "Burn it down!"; }
+	var s = "Tank the boss\n\nBumping the boss won't damage you\n\Position it to protect your team";
+	if(pc.sprite_index == imgMCHeal){ s = "Heal the Tank\n\nYou'll auto-cast heals while not moving or attacking\n\n"; }
+	if(pc.sprite_index == imgMCDps){ s = "\n\nFinish the boss!\n\nMax DPS!"; }
 	
 	draw_set_color(ww.c_burlywood);
 	draw_rectangle(0, 100, camera_get_view_width(view_camera[0]), 300, false);
 	draw_set_color(c_white);
 	draw_set_halign(fa_center);
-	draw_text(camera_get_view_width(view_camera[0]) / 2, 200, s);
+	draw_text(camera_get_view_width(view_camera[0]) / 2, 120, s);
 	draw_set_halign(fa_left);
 }
 

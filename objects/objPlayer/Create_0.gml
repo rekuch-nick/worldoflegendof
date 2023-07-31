@@ -48,3 +48,14 @@ playerShift(0);
 hp[imgMCTank] = 100; hpMax[imgMCTank] = 100;
 hp[imgMCHeal] = 100; hpMax[imgMCHeal] = 100;
 hp[imgMCDps] = 100; hpMax[imgMCDps] = 100;
+
+mp[imgMCTank] = 100; mpMax[imgMCTank] = 100;
+mp[imgMCHeal] = 100; mpMax[imgMCHeal] = 100;
+mp[imgMCDps] = 100; mpMax[imgMCDps] = 100;
+
+healFast = false;
+healAoE = false;
+
+
+castTime = 0;
+castTimeMax = 90;
