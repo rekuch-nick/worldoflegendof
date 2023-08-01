@@ -5,6 +5,7 @@ function harm(c1, c2, atk){
 			mightCo: 1,
 		}
 	}
+
 	
 	
 	var dmgMax = atk.mightCo * c1.might;
@@ -16,6 +17,11 @@ function harm(c1, c2, atk){
 	arm = arm + (c1.armorPen / 100);
 	arm = clamp(arm, .1, 1);
 	dmg = floor(dmg * arm);
+	
+	if(c2.sprite_index == imgMCTank && pc.tankGuardTime > 0){
+		dmg = ceil(dmg / 4);
+	}
+	
 	dmg = clamp(dmg, 1, dmg);
 	
 	

@@ -7,4 +7,6 @@ element = Ele.normal;
 proc = noone;
 procChance = 0;
 
+
+
 c1 = ww.shooter;

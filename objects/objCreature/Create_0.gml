@@ -7,7 +7,7 @@ xPush = 0; yPush = 0;
 
 state = State.ready;
 
-
+onObject = noone;
 platDropTime = 0;
 
 depth = -800;

@@ -33,6 +33,7 @@ gotoRoom = noone;
 gotoRoomX = noone;
 gotoRoomY = noone;
 
+onObject = noone;
 
 image_speed = 0;
 walkAniCD = 40;
@@ -60,6 +61,7 @@ facePic[2] = imgFaceDps;
 healFast = false;
 healAoE = false;
 
+tankGuardTime = 0;
 
 castTime = 0;
 castTimeMax = 90;

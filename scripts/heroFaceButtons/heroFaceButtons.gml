@@ -3,15 +3,24 @@ function heroFaceButtons(){
 	
 	if(pressed1 && attackingFrames < 1 && sprite_index == imgMCTank){
 		instance_create_depth(x + (facing * 64), y, depth + 1, objEffSlash);
-		
-		
 		attackingFrames = 15; 
+	}
+	
+	if(pressed2 && attackingFrames < 1 && pc.mp[0] >= 2 && sprite_index == imgMCTank){
+		pc.mp[0] -= 2;
+		pc.tankGuardTime = 15;
 	}
 	
 	
 	
-	if(pressed1 && attackingFrames < 1 && sprite_index == imgMCDps){ 
+	if(pressed1 && yIn >= 0 && attackingFrames < 1 && sprite_index == imgMCDps){ 
 		instance_create_depth(x + (facing * 32), y, depth + 1, objEffFirebolt);
+		
+		attackingFrames = 15; 
+	}
+	
+	if(pressed1 && yIn < 0 && attackingFrames < 1 && sprite_index == imgMCDps){ 
+		instance_create_depth(x + (facing * 32), y, depth + 1, objEffFireLob);
 		
 		attackingFrames = 15; 
 	}

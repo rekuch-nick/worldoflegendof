@@ -25,7 +25,9 @@ function heroAnimate(){
 		if(walkAniCD < 21){ f ++; }
 		if(walkAniCD < 11){ f ++; }
 	}
+	if(sprite_index == imgMCTank && pc.tankGuardTime > 0){ f = choose(12, 13); }
 	if(attackingFrames > 0){ f = 9; attackingFrames --; }
+	
 	image_index = f;
 	
 	image_alpha = 1;

@@ -27,6 +27,7 @@ enum Ele {
 
 enum MobAction {
 	slam,
+	bump,
 }
 
 draw_set_font(fntPlain);

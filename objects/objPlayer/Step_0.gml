@@ -44,7 +44,7 @@ if(ww.state == State.play){
 	
 	characterPushDecay();
 	if(hurtTime > 0){ hurtTime --; }
-	
+	if(tankGuardTime > 0){ tankGuardTime --; }
 	
 	
 	timeMS ++;
@@ -55,6 +55,8 @@ if(ww.state == State.play){
 		mp[2] = clamp(mp[2] + 1, 0, mpMax[2]);
 	}
 	
+	
+	creatureOnObject();
 	
 	heroAnimate();
 	

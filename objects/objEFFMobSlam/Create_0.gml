@@ -3,7 +3,7 @@ event_inherited();
 //drawColor = c_red;
 
 
-mightCo = 1;
+mightCo = 4;
 element = Ele.normal;
 proc = noone;
 procChance = 0;

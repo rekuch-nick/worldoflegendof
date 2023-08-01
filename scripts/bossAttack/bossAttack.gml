@@ -38,9 +38,19 @@ function bossAttack(){
 			attackCD = attackCDMax;
 			attackingFrames = 15;
 			
-			var d = point_distance(x, y, tar.x, tar.y);
-			if(d < fat * 2){
-				harm(id, tar, MobAction.slam);
+			var tarList = [pc];
+			with(objActor){
+				tarList[array_length(tarList)] = id;
+			}
+			
+			for(var i=0; i<array_length(tarList); i++){
+				var aa = x + (facing * fat);
+				//var d = point_distance(aa, y, tarList[i].x, tarList[i].y);
+				var d = point_distance(aa, y, tarList[i].x, y);
+				if(abs(y - tarList[i].y) > 64){ d = 1000; }
+				if(d < fat * 1.2){ ////
+					harm(id, tarList[i], MobAction.slam);
+				}
 			}
 			
 			

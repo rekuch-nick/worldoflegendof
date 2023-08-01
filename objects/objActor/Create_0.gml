@@ -31,6 +31,7 @@ jumpsMax = 1;
 onLadder = false;
 
 xStart = x; yStart = y;
+onObject = noone;
 
 castTime = 0;
 castTimeMax = 90;

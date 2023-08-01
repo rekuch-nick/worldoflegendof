@@ -51,16 +51,16 @@ function playerGetInput(){
 	holding1 = keyboard_check(ord("1")) || gamepad_button_check(pc.gamepadID, gp_face2);
 	pressed1 = keyboard_check_pressed(ord("1")) || gamepad_button_check_pressed(pc.gamepadID, gp_face2);
 	
-	holding2 = keyboard_check(ord("2")) || gamepad_button_check(pc.gamepadID, gp_face2);
+	holding2 = keyboard_check(ord("2")) || gamepad_button_check(pc.gamepadID, gp_face3);
 	pressed2 = keyboard_check_pressed(ord("2")) || gamepad_button_check_pressed(pc.gamepadID, gp_face3);
 	
-	holding3 = keyboard_check(ord("3")) || gamepad_button_check(pc.gamepadID, gp_face2);
+	holding3 = keyboard_check(ord("3")) || gamepad_button_check(pc.gamepadID, gp_face4);
 	pressed3 = keyboard_check_pressed(ord("3")) || gamepad_button_check_pressed(pc.gamepadID, gp_face4);
 	
-	holding4 = keyboard_check(ord("4")) || gamepad_button_check(pc.gamepadID, gp_face2);
+	holding4 = keyboard_check(ord("4")) || gamepad_button_check(pc.gamepadID, gp_shoulderl);
 	pressed4 = keyboard_check_pressed(ord("4")) || gamepad_button_check_pressed(pc.gamepadID, gp_shoulderl);
 	
-	holding5 = keyboard_check(ord("5")) || gamepad_button_check(pc.gamepadID, gp_face2);
+	holding5 = keyboard_check(ord("5")) || gamepad_button_check(pc.gamepadID, gp_shoulderr);
 	pressed5 = keyboard_check_pressed(ord("5")) || gamepad_button_check_pressed(pc.gamepadID, gp_shoulderr);
 	
 	holdingStart = keyboard_check(vk_enter) || gamepad_button_check(pc.gamepadID, gp_start);

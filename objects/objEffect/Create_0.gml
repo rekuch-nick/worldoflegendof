@@ -11,6 +11,10 @@ square = noone;
 
 drawColor = c_white;
 
+pointBySpeed = false;
+
+passWall = true;
+
 xStart = x;
 yStart = y;
 wob = 0;
