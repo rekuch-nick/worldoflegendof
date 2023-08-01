@@ -1,6 +1,14 @@
 function drawHero(){
 	
-	
+	if(sprite_index == imgMCHeal){
+		if(pc.healFast){
+			draw_sprite_ext(imgHealWingsOverheal, 0, x, y, 4, 4, 0, c_white, random_range(.3, .4));
+		}
+		if(pc.healAoE){
+			draw_sprite_ext(imgHealWingsMultitarget, 0, x, y, 4, 4, 0, c_white, random_range(.3, .4));
+		}
+		
+	}
 	
 	draw_self();
 	

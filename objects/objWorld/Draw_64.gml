@@ -3,9 +3,16 @@
 //draw_text(10, 50, pc.state);
 //draw_text(10, 70, string(ww.bfiMax - ww.bfi));
 
-draw_text(10, 10, "Tank: " + string(pc.hp[imgMCTank]));
-draw_text(10, 30, "Heal: " + string(pc.hp[imgMCHeal]));
-draw_text(10, 50, "Dps: " + string(pc.hp[imgMCDps]));
+//draw_text(10, 10, string(pc.hp[0]));
+//draw_text(10, 50, string(pc.hp[1]));
+//draw_text(10, 90, string(pc.hp[2]));
+
+
+drawNamePlate(4, 4, 0);
+drawNamePlate(266, 4, 1);
+drawNamePlate(528, 4, 2);
+
+
 
 
 if(state == State.title){

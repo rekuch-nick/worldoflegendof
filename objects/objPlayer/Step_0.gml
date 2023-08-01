@@ -45,6 +45,17 @@ if(ww.state == State.play){
 	characterPushDecay();
 	if(hurtTime > 0){ hurtTime --; }
 	
+	
+	
+	timeMS ++;
+	if(timeMS >= 30){
+		timeMS = 0;
+		mp[0] = clamp(mp[0] + 1, 0, mpMax[0]);
+		mp[1] = clamp(mp[1] + 1, 0, mpMax[1]);
+		mp[2] = clamp(mp[2] + 1, 0, mpMax[2]);
+	}
+	
+	
 	heroAnimate();
 	
 	

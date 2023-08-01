@@ -23,7 +23,10 @@ function harm(c1, c2, atk){
 	
 	
 	if(c2.id == pc || c2.object_index == objActor){
-		pc.hp[c2.sprite_index] -= dmg;
+		var ii = 0;
+		if(c2.sprite_index == imgMCHeal){ ii = 1; }
+		if(c2.sprite_index == imgMCDps){ ii = 2; }
+		pc.hp[ii] -= dmg;
 	} else {
 		c2.hp -= dmg
 	}

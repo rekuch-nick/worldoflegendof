@@ -7,20 +7,19 @@ function heroHealing(){
 			
 			castTime ++;
 			castTimeMax = 30 * 3;
-			if(pc.healFast){ castTimeMax -= 45; }
 			if(pc.healAoE){ castTimeMax += 60; }
+			if(pc.healFast){ castTimeMax -= 45; }
 			
 			var healCost = 4;
 			if(pc.healFast){ healCost += 2; }
 			if(pc.healAoE){ healCost += 2; }
 			
 			
-			
 			if(castTime >= castTimeMax){
 				castTime = 0;
 				
-				if(pc.mp[sprite_index] >= healCost){
-					pc.mp[sprite_index] -= healCost;
+				if(pc.mp[1] >= healCost){
+					pc.mp[1] -= healCost;
 					
 					if(pc.healAoE){
 						heroHealApply(pc);

@@ -46,3 +46,7 @@ bfiMax = 30 * 30; bfi = 0;
 for(var i=0; i<400; i++){
 	bossDown[i] = false;
 }
+
+
+
+

@@ -45,13 +45,17 @@ hurtTime = 0;
 
 playerShift(0);
 
-hp[imgMCTank] = 100; hpMax[imgMCTank] = 100;
-hp[imgMCHeal] = 100; hpMax[imgMCHeal] = 100;
-hp[imgMCDps] = 100; hpMax[imgMCDps] = 100;
+hp[0] = 100; hpMax[0] = 100;
+hp[1] = 100; hpMax[1] = 100;
+hp[2] = 100; hpMax[2] = 100;
 
-mp[imgMCTank] = 100; mpMax[imgMCTank] = 100;
-mp[imgMCHeal] = 100; mpMax[imgMCHeal] = 100;
-mp[imgMCDps] = 100; mpMax[imgMCDps] = 100;
+mp[0] = 100; mpMax[0] = 100;
+mp[1] = 100; mpMax[1] = 100;
+mp[2] = 100; mpMax[2] = 100;
+
+facePic[0] = imgFaceTank;
+facePic[1] = imgFaceHeal;
+facePic[2] = imgFaceDps;
 
 healFast = false;
 healAoE = false;
@@ -59,3 +63,5 @@ healAoE = false;
 
 castTime = 0;
 castTimeMax = 90;
+
+timeMS = 0;
