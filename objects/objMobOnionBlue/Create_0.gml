@@ -5,3 +5,4 @@ moveSpeed = 3;
 
 turnAtLedgeChance = 100;
 
+loot = lootListCommon();

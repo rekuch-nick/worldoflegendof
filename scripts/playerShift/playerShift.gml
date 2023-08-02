@@ -1,11 +1,11 @@
 function playerShift(n){
 
-	if(pc.sprite_index == imgMCTank && n == 1){ pc.sprite_index = imgMCHeal; }
-	else if(pc.sprite_index == imgMCTank && n == -1){ pc.sprite_index = imgMCDps; }
-	else if(pc.sprite_index == imgMCHeal && n == 1){ pc.sprite_index = imgMCDps; }
-	else if(pc.sprite_index == imgMCHeal && n == -1){ pc.sprite_index = imgMCTank; }
-	else if(pc.sprite_index == imgMCDps && n == 1){ pc.sprite_index = imgMCTank; }
-	else if(pc.sprite_index == imgMCDps && n == -1){ pc.sprite_index = imgMCHeal; }
+	if(pc.sprite_index == imgMCTank && n == 1){ pc.sprite_index = imgMCHeal; pc.index = 1; }
+	else if(pc.sprite_index == imgMCTank && n == -1){ pc.sprite_index = imgMCDps; pc.index = 2; }
+	else if(pc.sprite_index == imgMCHeal && n == 1){ pc.sprite_index = imgMCDps; pc.index = 2; }
+	else if(pc.sprite_index == imgMCHeal && n == -1){ pc.sprite_index = imgMCTank; pc.index = 0; }
+	else if(pc.sprite_index == imgMCDps && n == 1){ pc.sprite_index = imgMCTank; pc.index = 0; }
+	else if(pc.sprite_index == imgMCDps && n == -1){ pc.sprite_index = imgMCHeal; pc.index = 1; }
 	
 	heroSetStats();
 	

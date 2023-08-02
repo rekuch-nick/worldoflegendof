@@ -6,3 +6,6 @@ jumpChance = 20;
 jumpPower = -5;
 
 ignorePush = true;
+
+
+loot = lootListCommon();

@@ -13,4 +13,7 @@ function heroHealApply(c){
 	pc.hp[ii] = clamp(pc.hp[ii] + d, 0, pc.hpMax[ii]);
 	
 	
+	var s = instance_create_depth(c.x, c.y - c.head, -900, objEffect);
+	s.txtSmall = "+" + string(d);
+	s.txtColor = c_lime;
 }

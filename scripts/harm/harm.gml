@@ -26,6 +26,7 @@ function harm(c1, c2, atk){
 	
 	
 	if(c2.isBoss && c1.sprite_index == imgMCDps){ dmg *= 4; }
+	if(c1.isBoss && c2.sprite_index == imgMCTank){ dmg = ceil(dmg / 2); }
 	
 	
 	if(c2.id == pc || c2.object_index == objActor){
@@ -39,4 +40,5 @@ function harm(c1, c2, atk){
 	
 	var s = instance_create_depth(c2.x, c2.y - c2.head, -900, objEffect);
 	s.txtSmall = "-" + string(dmg);
+	s.txtColor = c2.aly == 1 ? c_red : c_white;
 }

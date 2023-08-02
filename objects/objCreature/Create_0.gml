@@ -79,4 +79,4 @@ spellWhen[0] = 6;
 castIndex = 0;
 castTime = 0;
 
-
+loot = noone;

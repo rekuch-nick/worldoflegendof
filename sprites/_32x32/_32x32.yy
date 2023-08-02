@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "zzSheets",
+    "path": "folders/Sprites/zzSheets.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

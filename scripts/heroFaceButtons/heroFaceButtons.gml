@@ -6,8 +6,8 @@ function heroFaceButtons(){
 		attackingFrames = 15; 
 	}
 	
-	if(pressed2 && attackingFrames < 1 && pc.mp[0] >= 2 && sprite_index == imgMCTank){
-		pc.mp[0] -= 2;
+	if(pressed2 && attackingFrames < 1 && pc.mp[0] >= 10 && sprite_index == imgMCTank){
+		pc.mp[0] -= 10;
 		pc.tankGuardTime = 15;
 	}
 	

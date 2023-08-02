@@ -4,6 +4,7 @@ timeSinceTappedUp = 30;
 timeSinceTappedDown = 30;
 state = State.ready;
 platDropTime = 0;
+icd = 0;
 playerGetInput();
 depth = -1000;
 facing = 1;
@@ -19,7 +20,7 @@ yStart = y;
 moveSpeed = 7;
 xSpeed = 0;
 ySpeed = 0;
-
+aly = 1;
 
 grav = 1;
 gravMax = 15;
@@ -67,3 +68,25 @@ castTime = 0;
 castTimeMax = 90;
 
 timeMS = 0;
+
+
+icdMax = 6;
+
+
+xBag = 0; yBag = 0;
+bagPower = 2;
+bagPowerMax = 6;
+
+
+index = 0;
+
+for(var a=0; a<19; a++){ for(var b=0; b<bagPowerMax; b++){
+	bag[a, b] = noone;
+	bagStack[a, b] = 0;
+}}
+
+for(var i=0; i<3; i++){
+	wep[i] = noone;
+	arm[i] = noone;
+	trink[i] = noone;
+}

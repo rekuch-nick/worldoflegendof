@@ -11,8 +11,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "effs",
+    "path": "folders/Objects/effs.yy",
   },
   "parentObjectId": {
     "name": "objEffect",

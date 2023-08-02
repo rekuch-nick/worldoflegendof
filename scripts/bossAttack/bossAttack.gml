@@ -3,6 +3,7 @@ function bossAttack(){
 	if(ww.phase == Phase.resetPos){ return; }
 	
 	var tar = bossPickTarget();
+	if(tar == noone){ return; }
 	if(tar.x < x){ facing = -1; } else { facing = 1; }
 	
 	

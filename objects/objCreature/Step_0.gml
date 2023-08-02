@@ -143,6 +143,17 @@ if(state == State.ready || state == State.aggro){
 	
 	
 	if(hp < 1){
+		
+		
+		
+		if(loot != noone){
+			var i = loot[irandom_range(0, array_length(loot) - 1)];
+			instance_create_depth(x, y, depth + 10, i);
+		}
+		
+		
+		
+		
 		if(isBoss){
 			ww.bossDown[room] = true;
 			ww.phase = noone;
@@ -156,6 +167,10 @@ if(state == State.ready || state == State.aggro){
 				instance_destroy();
 			}
 		}
+		
+		
+		
+		
 		
 		instance_destroy();
 	}

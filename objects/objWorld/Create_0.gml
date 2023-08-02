@@ -3,6 +3,7 @@ enum State {
 	play,
 	moveRooms,
 	bossCD,
+	bag,
 	
 	ready,
 	aggro,
@@ -28,6 +29,18 @@ enum Ele {
 enum MobAction {
 	slam,
 	bump,
+}
+
+enum Item {
+	junk,
+	matSmith,
+	matAlch,
+	matEnchant,
+	matJewel,
+	wep,
+	arm,
+	trink,
+	potion,
 }
 
 draw_set_font(fntPlain);

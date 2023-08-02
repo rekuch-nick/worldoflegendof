@@ -17,10 +17,17 @@ function heroSetStats(){
 	
 	
 	
+	if(img == imgMCTank){
+		index = 0;
+	}
 	
+	if(img == imgMCHeal){
+		index = 1;
+	}
 	
 	
 	if(img == imgMCDps){
+		index = 2;
 		jumpsMax = 2;
 	}
 

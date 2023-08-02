@@ -1,6 +1,8 @@
 function playerGetInput(){
 	gamepadCheck();
 	
+	if(icd > 0){ icd --; }
+	
 	xIn = 0;
 	yIn = 0;
 	

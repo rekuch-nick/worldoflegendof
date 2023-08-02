@@ -5,6 +5,8 @@ playerGetInput();
 
 if(ww.state == State.title){ playerStepTitle(); return; }
 
+if(ww.state == State.bag){ playerStepBag(); return; }
+
 if(ww.state == State.moveRooms){ playerStepMoveRooms(); return; }
 
 if(ww.state == State.bossCD){
@@ -19,6 +21,8 @@ if(ww.state == State.bossCD){
 }
 
 if(ww.state == State.play){
+	if(pressedStart){ instance_create_depth(0, 0, -1001, objScreenBag); return; }
+		
 	
 	if(ww.phase == noone){
 		if(pressed5){ playerShift(1); }
@@ -54,6 +58,9 @@ if(ww.state == State.play){
 		mp[1] = clamp(mp[1] + 1, 0, mpMax[1]);
 		mp[2] = clamp(mp[2] + 1, 0, mpMax[2]);
 	}
+	
+	
+	creaturePickupItems();
 	
 	
 	creatureOnObject();
